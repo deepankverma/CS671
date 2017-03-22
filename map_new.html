@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CS671</title>
+
+    <link 
+        rel="stylesheet" 
+        href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
+    />
+    
+    <script
+        src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+    </script>
+    
+</head>
+<body>
+
+
+	<!-- TO DO : making width and height responsive to varying sizes -->
+
+	<div id="map" style="width: 1260px; height: 650px"></div>
+
+	<script type="text/javascript">
+	
+        var map = L.map('map').setView([19.07, 72.88], 10); 
+        /*setting lat long to mumbai.*/
+        
+        /*TO DO : Using Mapbox styles instead of openstreetmap.*/
+        /*TO DO : Integrating D3js and prepare some charts over dummy data*/
+
+
+        mapLink = 
+            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; ' + mapLink + ' Contributors',
+            maxZoom: 18,
+            }).addTo(map);
+							 
+</script>
+</body>
+</html>
